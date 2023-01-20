@@ -22,8 +22,8 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
       - name: Run SUT
-        run:  java -jar ./artifacts/app-ibank.jar -P:profile=test
-          java -jar ./artifacts/app-ibank.jar &
+        run:  java -jar ./artifacts/app-ibank-build-for-testers.jar -P:profile=test
+          java -jar ./artifacts/app-ibank-build-for-testers.jar &
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build witch Gradle
